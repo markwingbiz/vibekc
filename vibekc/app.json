@@ -28,10 +28,7 @@
       "bundleIdentifier": "com.vibekc.app"
     },
 
-    "plugins": [
-      ["expo-router"],
-    ],
-
+    
     "extra": {
       "router": {},
       "eas": {
