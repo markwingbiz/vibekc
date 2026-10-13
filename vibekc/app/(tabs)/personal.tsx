@@ -131,14 +131,14 @@ export default function PersonalScreen() {
   function applyPill(next: typeof activePill) {
     // Home pill routes home (personal page only logic)
     if (next === "home") {
-      router.push("/(tabs)");
+      router.replace("/(tabs)");
       return;
     }
 
     // Events pill routes to Events page
     if (next === "events" as any) {
       // (kept for safety if someone passes "events" manually)
-      router.push("/(tabs)/events");
+      router.replace("/(tabs)/events");
       return;
     }
 
@@ -167,7 +167,7 @@ export default function PersonalScreen() {
   function goToEvents() {
     // If your events screen is app/events.tsx, use "/events"
     // If your events screen is app/(tabs)/events.tsx, use "/(tabs)/events"
-    router.push("/(tabs)/events");
+    router.replace("/(tabs)/events");
   }
 
   return (

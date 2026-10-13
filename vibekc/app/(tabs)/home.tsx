@@ -91,7 +91,7 @@ export default function Home() {
 
   function go(tab: TabKey) {
     setActiveTab(tab);
-    router.push(`/(tabs)/${tab}`);
+    router.replace(`/(tabs)/${tab}`);
   }
 
   return (
@@ -165,7 +165,7 @@ export default function Home() {
 
                 return (
                   <Pressable
-                    onPress={() => router.push("/(tabs)/events")}
+                    onPress={() => router.replace("/(tabs)/events")}
                     style={[styles.cardOuter, styles.spotlightCardOuter]}
                   >
                     <ImageBackground
@@ -217,7 +217,7 @@ export default function Home() {
                 index === 0 ? "wine-outline" : index === 1 ? "triangle-outline" : "business-outline";
 
               return (
-                <Pressable onPress={() => router.push("/(tabs)/events")} style={styles.venueItem}>
+                <Pressable onPress={() => router.replace("/(tabs)/events")} style={styles.venueItem}>
                   <LinearGradient
                     colors={
                       index === 0
@@ -240,7 +240,7 @@ export default function Home() {
           />
 
           {/* Featured header row (UNCHANGED UI) */}
-          <Pressable onPress={() => router.push("/(tabs)/events")} style={styles.featureHeader}>
+          <Pressable onPress={() => router.replace("/(tabs)/events")} style={styles.featureHeader}>
             <Text style={styles.featureHeaderLeft}>Featured:</Text>
             <Text numberOfLines={1} style={styles.featureHeaderRight}>
               {featured.title}
@@ -261,7 +261,7 @@ export default function Home() {
                 const venue = getVenueNameFromEvent(item);
 
                 return (
-                  <Pressable onPress={() => router.push("/(tabs)/events")} style={styles.cardOuter}>
+                  <Pressable onPress={() => router.replace("/(tabs)/events")} style={styles.cardOuter}>
                     <ImageBackground
                       source={require("../../assets/backgrounds/home-bg.jpg")}
                       resizeMode="cover"

@@ -4,7 +4,7 @@ import { SafeAreaView, View, Text, StyleSheet } from "react-native";
 import { router, useLocalSearchParams } from "expo-router";
 import { BrandBackground } from "./ui/BrandBackground";
 import { BrandCard } from "./ui/BrandCard";
-import { BrandHeader } from "./ui/BrandHeader";
+import BrandHeader from "./ui/BrandHeader";
 import { radii, spacing, theme } from "./ui/theme";
 import type { Vibe } from "../data/experiences";
 import { GlowPill } from "./ui/GlowPill";

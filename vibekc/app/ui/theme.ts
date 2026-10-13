@@ -46,6 +46,14 @@ export const shadow = {
     shadowOffset: { width: 0, height: 10 },
     elevation: 10,
   },
+  // Softer/lighter variant used by GlassCard.
+  soft: {
+    shadowColor: "#000",
+    shadowOpacity: 0.18,
+    shadowRadius: 10,
+    shadowOffset: { width: 0, height: 4 },
+    elevation: 4,
+  },
   glow: {
     shadowColor: "#A855F7",
     shadowOpacity: 0.55,

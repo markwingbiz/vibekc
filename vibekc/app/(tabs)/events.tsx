@@ -131,10 +131,11 @@ function matchesSearch(e: EventItem, q: string) {
 }
 
 function matchesPersona(e: EventItem, persona: PersonaProfile) {
-  // Keep it forgiving: match ANY selected audience + ANY selected vibe
+  // Keep it forgiving: match the stored audience + vibe against the event's tags.
   // (If persona has none, allow all.)
-  const pAudience = (persona?.audienceTags || []).map((s) => s.toLowerCase());
-  const pVibes = (persona?.vibeTags || []).map((s) => s.toLowerCase());
+  // NOTE: personaStore persists singular `audience`/`vibe` — not tag arrays.
+  const pAudience = persona?.audience ? [persona.audience.toLowerCase()] : [];
+  const pVibes = persona?.vibe ? [persona.vibe.toLowerCase()] : [];
 
   const eAudience = (e.audienceTags || []).map((s) => s.toLowerCase());
   const eVibes = (e.vibeTags || []).map((s) => s.toLowerCase());
@@ -347,9 +348,9 @@ export default function EventsScreen() {
 
       {/* Top nav row (Home / Events / Personal) */}
       <View style={styles.topNavRow}>
-        <TopNavButton label="Home" onPress={() => router.push("/")} />
-        <TopNavButton label="Events" active onPress={() => router.push("/events")} />
-        <TopNavButton label="Personal" onPress={() => router.push("/personal")} />
+        <TopNavButton label="Home" onPress={() => router.replace("/")} />
+        <TopNavButton label="Events" active onPress={() => router.replace("/events")} />
+        <TopNavButton label="Personal" onPress={() => router.replace("/personal")} />
       </View>
 
       {/* Living header (ambient motion + glass + context + chips) */}

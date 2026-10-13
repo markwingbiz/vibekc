@@ -13,9 +13,9 @@ export default function TopTabs() {
     pathname.includes("/events") ? "events" : pathname.includes("/personal") ? "personal" : "home";
 
   function go(tab: TabKey) {
-    if (tab === "home") router.push("/");
-    if (tab === "events") router.push("/events");
-    if (tab === "personal") router.push("/personal");
+    if (tab === "home") router.replace("/");
+    if (tab === "events") router.replace("/events");
+    if (tab === "personal") router.replace("/personal");
   }
 
   return (

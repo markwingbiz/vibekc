@@ -3,7 +3,7 @@ import { SafeAreaView, View, Text, Pressable, StyleSheet, ScrollView } from "rea
 import { router, useLocalSearchParams } from "expo-router";
 import { BrandBackground } from "./ui/BrandBackground";
 import { BrandCard } from "./ui/BrandCard";
-import { BrandHeader } from "./ui/BrandHeader";
+import BrandHeader from "./ui/BrandHeader";
 import { radii, spacing, theme } from "./ui/theme";
 import { EXPERIENCES, Persona, Vibe } from "../data/experiences";
 

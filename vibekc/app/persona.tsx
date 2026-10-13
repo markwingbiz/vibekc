@@ -11,22 +11,14 @@ import {
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
+import {
+  savePersona,
+  DEFAULT_PERSONA,
+  type PersonaProfile,
+} from "../lib/personaStore";
 
 type Audience = "singles" | "couples" | "parents";
 type Vibe = "fun" | "relaxed" | "adventurous" | "spicy" | "sporty";
-
-type PersonaProfile = {
-  audience: Audience;
-  vibe: Vibe;
-};
-
-const DEFAULT_PERSONA: PersonaProfile = { audience: "singles", vibe: "fun" };
-
-// If you already have lib/personaStore.ts, swap these with your real functions.
-async function savePersonaLocal(p: PersonaProfile) {
-  // minimal no-op placeholder; wire to AsyncStorage or your existing personaStore
-  return;
-}
 
 export default function PersonaBuilderScreen() {
   const router = useRouter();
@@ -54,7 +46,7 @@ export default function PersonaBuilderScreen() {
   const [persona, setPersona] = useState<PersonaProfile>(DEFAULT_PERSONA);
 
   async function onSave() {
-    await savePersonaLocal(persona);
+    await savePersona(persona);
     router.back();
   }
 

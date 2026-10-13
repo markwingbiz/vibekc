@@ -227,7 +227,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   choiceIconText: { color: THEME.text, fontSize: 12, fontWeight: "800" },
-  choiceText: { color: THEME.text, fontSize: 15, fontWeight: "650", flex: 1 },
+  choiceText: { color: THEME.text, fontSize: 15, fontWeight: "600", flex: 1 },
   checkbox: {
     width: 26,
     height: 26,

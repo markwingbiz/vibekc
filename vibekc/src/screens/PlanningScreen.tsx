@@ -21,24 +21,24 @@ export default function PlanningScreen() {
 
       {/* Nebula texture PNG (KEEP YOUR EXISTING FILE) */}
       <Image
-        source={require("../../assets/nebula.png")} // <-- change to your existing PNG
+        source={require("../../assets/backgrounds/nebula.png")} // <-- change to your existing PNG
         resizeMode="cover"
         style={styles.nebula}
       />
 
       {/* Soft orb glows (KEEP YOUR EXISTING FILES or reuse one glow blob PNG) */}
       <Image
-        source={require("../../assets/orb_pink.png")} // <-- change to your existing PNG
+        source={require("../../assets/overlays/orb.png")} // <-- change to your existing PNG
         resizeMode="contain"
         style={styles.orbTopRight}
       />
       <Image
-        source={require("../../assets/orb_purple.png")} // <-- change to your existing PNG
+        source={require("../../assets/overlays/orb.png")} // <-- change to your existing PNG
         resizeMode="contain"
         style={styles.orbMidLeft}
       />
       <Image
-        source={require("../../assets/orb_blue.png")} // <-- change to your existing PNG
+        source={require("../../assets/overlays/orb.png")} // <-- change to your existing PNG
         resizeMode="contain"
         style={styles.orbBottom}
       />
