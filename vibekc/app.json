@@ -28,7 +28,15 @@
       "bundleIdentifier": "com.vibekc.app"
     },
 
-    
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow OutnAbout to access your camera to scan QR codes for rewards and check-ins."
+        }
+      ]
+    ],
+
     "extra": {
       "router": {},
       "eas": {
