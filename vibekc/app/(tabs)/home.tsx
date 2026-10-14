@@ -149,25 +149,18 @@ export default function Home() {
             })}
           </View>
 
-          {/* ✅ Spotlight carousel (horizontal scroll, same card design) */}
-          <View style={styles.spotlightCarouselWrap}>
-            <FlatList
-              horizontal
-              data={spotlightEvents.length ? spotlightEvents : [spotlightForTitle]}
-              keyExtractor={(item) => item.id}
-              showsHorizontalScrollIndicator={false}
-              snapToAlignment="start"
-              decelerationRate="fast"
-              contentContainerStyle={styles.spotlightCarouselContent}
-              renderItem={({ item, index }) => {
-                const venue = getVenueNameFromEvent(item);
-                const t = titleToTwoLines(item.title);
+          {/* Spotlight list (vertical stack, like the mock) */}
+          <View style={styles.spotlightListWrap}>
+            {(spotlightEvents.length ? spotlightEvents : [spotlightForTitle]).map((item) => {
+              const venue = getVenueNameFromEvent(item);
+              const t = titleToTwoLines(item.title);
 
-                return (
-                  <Pressable
-                    onPress={() => router.replace("/(tabs)/events")}
-                    style={[styles.cardOuter, styles.spotlightCardOuter]}
-                  >
+              return (
+                <Pressable
+                  key={item.id}
+                  onPress={() => router.replace("/(tabs)/events")}
+                  style={[styles.cardOuter, styles.spotlightCardOuter]}
+                >
                     <ImageBackground
                       source={require("../../assets/backgrounds/home-bg.jpg")}
                       resizeMode="cover"
@@ -198,8 +191,7 @@ export default function Home() {
                     </ImageBackground>
                   </Pressable>
                 );
-              }}
-            />
+            })}
           </View>
 
           {/* Top Venues */}
@@ -371,18 +363,12 @@ const styles = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.10)",
   },
 
-  // ✅ NEW: Spotlight horizontal carousel wrapper
-  spotlightCarouselWrap: {
-    // no visual change, just provides the horizontal list container
-    marginBottom: 0,
-  },
-  spotlightCarouselContent: {
+  // Spotlight vertical list (stacked full-width cards, like the mock)
+  spotlightListWrap: {
     gap: 14,
-    paddingRight: 18,
   },
   spotlightCardOuter: {
-    // keep same look, just set a fixed width for snapping/scrolling
-    width: 330, // adjust if you want wider/narrower cards
+    width: "100%",
   },
 
   heroCard: {

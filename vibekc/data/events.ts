@@ -118,7 +118,7 @@ export const EVENTS: EventItem[] = [
   // --- Featured (next 20) ---
   {
     id: "e_011",
-    title: "Featured: KC Comedy Night",
+    title: "KC Comedy Night",
     venueId: "The Comedy Club of Kansas City",
     startISO: isoInHours(12),
     category: "featured",
@@ -128,7 +128,7 @@ export const EVENTS: EventItem[] = [
   },
   {
     id: "e_012",
-    title: "Featured: Museum Late Hours",
+    title: "Museum Late Hours",
     venueId: "The Nelson-Atkins Museum of Art",
     startISO: isoInHours(14),
     category: "featured",
@@ -138,7 +138,7 @@ export const EVENTS: EventItem[] = [
   },
   {
     id: "e_013",
-    title: "Featured: Family Science Activity Night",
+    title: "Family Science Activity Night",
     venueId: "Science City",
     startISO: isoInHours(26),
     category: "featured",
@@ -148,7 +148,7 @@ export const EVENTS: EventItem[] = [
   },
   {
     id: "e_014",
-    title: "Featured: Indoor Soccer Open Play",
+    title: "Indoor Soccer Open Play",
     venueId: "Sporting KC Training Facility",
     startISO: isoInHours(32),
     category: "featured",
@@ -158,7 +158,7 @@ export const EVENTS: EventItem[] = [
   },
   {
     id: "e_015",
-    title: "Featured: Brunch + Walk",
+    title: "Brunch + Walk",
     venueId: "Westport",
     startISO: isoInHours(36),
     category: "featured",
@@ -168,7 +168,7 @@ export const EVENTS: EventItem[] = [
   },
   {
     id: "e_016",
-    title: "Featured: Family Craft Hour",
+    title: "Family Craft Hour",
     venueId: "Crown Center",
     startISO: isoInHours(42),
     category: "featured",
@@ -178,7 +178,7 @@ export const EVENTS: EventItem[] = [
   },
   {
     id: "e_017",
-    title: "Featured: Spin Class Pop-Up",
+    title: "Spin Class Pop-Up",
     venueId: "CycleBar",
     startISO: isoInHours(44),
     category: "featured",
@@ -188,7 +188,7 @@ export const EVENTS: EventItem[] = [
   },
   {
     id: "e_018",
-    title: "Featured: Date Night Cooking Class",
+    title: "Date Night Cooking Class",
     venueId: "Taste Buds Kitchen",
     startISO: isoInHours(48),
     category: "featured",
@@ -198,7 +198,7 @@ export const EVENTS: EventItem[] = [
   },
   {
     id: "e_019",
-    title: "Featured: Parents Night Out (Kids Activities)",
+    title: "Parents Night Out (Kids Activities)",
     venueId: "YMCA",
     startISO: isoInHours(54),
     category: "featured",
@@ -208,7 +208,7 @@ export const EVENTS: EventItem[] = [
   },
   {
     id: "e_020",
-    title: "Featured: Outdoor Yoga Flow",
+    title: "Outdoor Yoga Flow",
     venueId: "Berkley Riverfront Park",
     startISO: isoInHours(60),
     category: "featured",
